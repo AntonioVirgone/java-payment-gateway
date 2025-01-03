@@ -12,26 +12,26 @@
     </parent>
 
     <groupId>com.spritelab</groupId>
-    <artifactId>{{projectname}}-multi-module</artifactId>
+    <artifactId>payment-gateway-multi-module</artifactId>
     <version>0.0.1</version>
 
     <packaging>pom</packaging>
 
     <modules>
-        <module>{{projectname}}-domain</module>
-        <module>{{projectname}}-adapter-inbound</module>
-        <module>{{projectname}}-adapter-outbound</module>
-        <module>{{projectname}}-client</module>
-        <module>{{projectname}}-view-model</module>
-        <module>{{projectname}}</module>
+        <module>payment-gateway-domain</module>
+        <module>payment-gateway-adapter-inbound</module>
+        <module>payment-gateway-adapter-outbound</module>
+        <module>payment-gateway-client</module>
+        <module>payment-gateway-view-model</module>
+        <module>payment-gateway</module>
     </modules>
 
     <properties>
-        <docker.image.name>{{projectname}}-api</docker.image.name>
+        <docker.image.name>payment-gateway-api</docker.image.name>
     </properties>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:sprite-lab/{{projectname}}.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:sprite-lab/payment-gateway.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 

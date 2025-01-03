@@ -4,12 +4,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <artifactId>{{projectname}}-multi-module</artifactId>
+    <artifactId>payment-gateway-multi-module</artifactId>
     <groupId>com.spritelab</groupId>
     <version>0.0.1</version>
   </parent>
 
-  <artifactId>{{projectname}}-client</artifactId>
+  <artifactId>payment-gateway-client</artifactId>
 
   <properties>
     <maven.deploy.skip>false</maven.deploy.skip>
@@ -19,7 +19,7 @@
 
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>{{projectname}}-view-model</artifactId>
+      <artifactId>payment-gateway-view-model</artifactId>
       <version>${project.parent.version}</version>
     </dependency>
 

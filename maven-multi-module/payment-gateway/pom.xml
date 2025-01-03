@@ -5,49 +5,32 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <artifactId>{{projectname}}-multi-module</artifactId>
+    <artifactId>payment-gateway-multi-module</artifactId>
     <groupId>com.spritelab</groupId>
     <version>0.0.1</version>
   </parent>
 
-  <artifactId>{{projectname}}-adapter-inbound</artifactId>
+  <artifactId>payment-gateway</artifactId>
 
   <properties>
     <maven.deploy.skip>true</maven.deploy.skip>
   </properties>
 
   <dependencies>
-
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>{{projectname}}-domain</artifactId>
-      <version>${project.parent.version}</version>
+      <artifactId>payment-gateway-adapter-inbound</artifactId>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>{{projectname}}-view-model</artifactId>
-      <version>${project.parent.version}</version>
-    </dependency>
-
-    <!-- ===================== -->
-    <!-- = SPRING FRAMEWORKS = -->
-    <!-- ===================== -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
+      <artifactId>payment-gateway-adapter-outbound</artifactId>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.springdoc</groupId>
-      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-      <version>2.2.0</version>
-    </dependency>
-
-    <!-- ==================== -->
-    <!-- = MAPPER GENERATOR = -->
-    <!-- ==================== -->
-    <dependency>
-      <groupId>org.mapstruct</groupId>
-      <artifactId>mapstruct</artifactId>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>payment-gateway-domain</artifactId>
+      <version>${project.version}</version>
     </dependency>
 
     <!-- =================== -->
@@ -69,7 +52,24 @@
       <groupId>org.mockito</groupId>
       <artifactId>mockito-junit-jupiter</artifactId>
     </dependency>
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+    </dependency>
 
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>

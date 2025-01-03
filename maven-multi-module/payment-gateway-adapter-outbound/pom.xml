@@ -5,12 +5,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <artifactId>{{projectname}}-multi-module</artifactId>
+    <artifactId>payment-gateway-multi-module</artifactId>
     <groupId>com.spritelab</groupId>
     <version>0.0.1</version>
   </parent>
 
-  <artifactId>{{projectname}}-adapter-outbound</artifactId>
+  <artifactId>payment-gateway-adapter-outbound</artifactId>
 
   <properties>
     <maven.deploy.skip>true</maven.deploy.skip>
@@ -20,16 +20,8 @@
 
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>{{projectname}}-domain</artifactId>
+      <artifactId>payment-gateway-domain</artifactId>
       <version>${project.parent.version}</version>
-    </dependency>
-
-    <!-- ==================== -->
-    <!-- = MAPPER GENERATOR = -->
-    <!-- ==================== -->
-    <dependency>
-      <groupId>org.mapstruct</groupId>
-      <artifactId>mapstruct</artifactId>
     </dependency>
 
     <!-- =================== -->
