@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.spritelab</groupId>
+    <artifactId>{{projectname}}-multi-module</artifactId>
+    <version>0.0.1</version>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>{{projectname}}-domain</module>
+        <module>{{projectname}}-adapter-inbound</module>
+        <module>{{projectname}}-adapter-outbound</module>
+        <module>{{projectname}}-client</module>
+        <module>{{projectname}}-view-model</module>
+        <module>{{projectname}}</module>
+    </modules>
+
+    <properties>
+        <docker.image.name>{{projectname}}-api</docker.image.name>
+    </properties>
+
+    <scm>
+        <developerConnection>scm:git:git@github.com:sprite-lab/{{projectname}}.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>github-sprite-lab-maven-repo</id>
+            <name>GitHub SpriteLab Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/sprite-lab/sprite-lab-maven-repo</url>
+        </repository>
+    </repositories>
+
+</project>

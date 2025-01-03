@@ -1,0 +1,12 @@
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/dashboard?id=com.wise%3A{{projectname}}-multi-module)
+
+![CI](https://github.com/wise-emotions/java-{{projectname}}/workflows/CI/badge.svg)
+![Release](https://github.com/wise-emotions/java-{{projectname}}n/workflows/Release/badge.svg)
+
+| status | app version | mpc version |
+| --- | --- | --- |
+| ![alt text](https://img.shields.io/badge/dynamic/json?color=informational&label=wise-main-dev%20health%20live%20status&query=%24.status&url=https%3A%2F%2F{{projectname}}-api-dev.wisetools.it%2Fq%2Fapi%2Fhealth%2Flive) | ![alt text](https://img.shields.io/badge/dynamic/json?color=informational&label=wise-main-dev%20app%20version&query=%24.checks%5B0%5D.data.appVersion&url=https%3A%2F%2F{{projectname}}-dev.wisetools.it%2Fq%2Fapi%2Fhealth%2Flive) | ![alt text](https://img.shields.io/badge/dynamic/json?color=informational&label=wise-main-dev%20mpc%20version&query=%24.checks%5B0%5D.data.mpcVersion&url=https%3A%2F%2F{{projectname}}-api-dev.wisetools.it%2Fq%2Fapi%2Fhealth%2Flive) |
+| ![alt text](https://img.shields.io/badge/dynamic/json?color=informational&label=wise-main-test%20health%20live%20status&query=%24.status&url=https%3A%2F%2F{{projectname}}-api-test.wisetools.it%2Fq%2Fapi%2Fhealth%2Flive) | ![alt text](https://img.shields.io/badge/dynamic/json?color=informational&label=wise-main-test%20app%20version&query=%24.checks%5B0%5D.data.appVersion&url=https%3A%2F%2F{{projectname}}-test.wisetools.it%2Fq%2Fapi%2Fhealth%2Flive) | ![alt text](https://img.shields.io/badge/dynamic/json?color=informational&label=wise-main-test%20mpc%20version&query=%24.checks%5B0%5D.data.mpcVersion&url=https%3A%2F%2F{{projectname}}-api-test.wisetools.it%2Fq%2Fapi%2Fhealth%2Flive) |
+| ![alt text](https://img.shields.io/badge/dynamic/json?color=informational&label=wise-main-prod%20health%20live%20status&query=%24.status&url=https%3A%2F%2F{{projectname}}-api-prod.wisetools.it%2Fq%2Fapi%2Fhealth%2Flive) | ![alt text](https://img.shields.io/badge/dynamic/json?color=informational&label=wise-main-prod%20app%20version&query=%24.checks%5B0%5D.data.appVersion&url=https%3A%2F%2F{{projectname}}-prod.wisetools.it%2Fq%2Fapi%2Fhealth%2Flive) | ![alt text](https://img.shields.io/badge/dynamic/json?color=informational&label=wise-main-prod%20mpc%20version&query=%24.checks%5B0%5D.data.mpcVersion&url=https%3A%2F%2F{{projectname}}-api-prod.wisetools.it%2Fq%2Fapi%2Fhealth%2Flive) |
+
+# {{projectname}}
